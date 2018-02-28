@@ -1,0 +1,195 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    box-sizing: border-box;    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    color: #333;
+    font-size: 1.6rem;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-row: 1fr 1fr 1fr ;
+    grid-template-areas: 
+        "header header" 
+        "sidebar sidebar" 
+        "render-container render-container" 
+        "drawn-container drawn-container";
+    grid-gap: 10px;    
+    background: #fff;    
+    margin-bottom: 5rem;  
+}
+.header {
+    grid-area: header;
+    font-size: 2.5rem;
+    padding: 1.5rem 0.5rem .5rem 0;
+    border-bottom: 4px solid #ddd;    
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+}
+.sidebar {
+    grid-area: sidebar;
+    background: #EEEEC2;
+    border: 1px solid #CBECC7;
+    border-radius: 3px;
+    padding: 1.5rem;
+    overflow: hidden;    
+}
+.render-container {
+    grid-area: render-container;     
+    background: #EEEED8;
+    border: 1px solid #CBECC7;
+    border-radius: 3px;
+    padding: 1.5rem;
+    overflow: hidden;   
+    display: flex;
+    flex-direction: column;
+}
+.render-container__renderdeck{    
+    min-height: 250px;   
+    overflow: hidden; 
+}
+.render-container__cards-count-area{
+    margin-bottom: 1.5rem;    
+}
+.render-container__cards-total{
+    border-radius: 3px;
+    background: #fff;
+    padding: 1rem .5rem;
+    display: block;
+    font-size: 1.8rem;
+}
+.drawn-container {
+    grid-area: drawn-container;    
+    background: #EEEED8;
+    border: 1px solid #CBECC7;
+    border-radius: 3px;
+    padding: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {    
+    .container {
+        display: grid;
+        grid-template-columns: 5% 1fr 1fr 1fr 5%;
+        grid-template-row: 1fr 1fr 1fr;
+        grid-template-areas:             
+            ". header header header ." 
+            ". render-container render-container sidebar ." 
+            ". drawn-container drawn-container sidebar .";
+    }
+    .sidebar ,
+    .render-container__deck{
+        min-height: 400px;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .container {
+        display: grid;
+        grid-template-columns: 5% 2fr 1fr 1fr 5%;
+        grid-template-row: 1fr 1fr 1fr;
+        grid-template-areas:             
+            ". header header header ." 
+            ". render-container drawn-container sidebar ." 
+            ". render-container drawn-container sidebar .";
+    }
+}
+.card{
+	border: solid 1px #aaa;
+	border-radius: 9px;
+	width: 70px;
+	height: 100px;
+	float:left;
+	background-color: white;
+	padding: 3px 3px 3px 3px;
+	margin: 2px;
+
+	display: grid;
+ 	grid-template-rows: 1fr 2fr;
+}
+.card__value{
+    font-size: 1.5rem;	
+    font-weight: bold;
+    padding-left: 0.2rem;
+}
+.diamond .card__value,
+.heart .card__value {
+    color: #d40000;
+}
+.card__suit{
+	background-image: url('../img/suits.png');
+	height: 37px;
+	width: 36px;	
+	margin: 0 auto;
+}
+.card__suit-diamond{
+	background-position-y: 37px;
+    background-position-x:1px;
+}
+.card__suit-heart{
+	background-position-x:35px;
+}
+.card__suit-club{
+	background-position-x:35px;
+	background-position-y:37px;
+}
+.title{    
+    margin-bottom: 1.5rem;
+}
+.form,
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+.button{
+    background: #404067;
+    border: none;
+    border-bottom: .3rem solid #000;
+    color: white;    
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+.button:hover{
+    background: #7575da;
+}
+.button:disabled{
+    opacity: .5;
+    cursor: not-allowed;
+}
+.button:disabled:hover{
+    background: #404067;
+}
+.button--small{    
+    width: 49%;    
+}
+.form__input{
+    border: none;
+    border: .1rem solid #ccc; 
+    padding: 1rem;
+    width: 49%;
+}
+.form__button{
+    width: 49%; 
+}
+.alert{
+    color: #d40000;
+    margin-bottom: 1.5rem;
+}
+.drawn-cards-area .title{
+    margin-top: 5rem;
+}
+.drawn-cards-area {
+  display: none;
+}
