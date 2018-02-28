@@ -34,8 +34,7 @@ body {
     grid-area: header;
     font-size: 2.5rem;
     padding: 1.5rem 0.5rem .5rem 0;
-    border-bottom: 4px solid #ddd;    
-    margin-bottom: 2rem;
+    border-bottom: 4px solid #ddd;  
     padding: 1.5rem;
 }
 .sidebar {
@@ -91,6 +90,9 @@ body {
     .sidebar ,
     .render-container__deck{
         min-height: 400px;
+    }
+    .header {    
+        margin-bottom: 2rem;
     }
 }
 @media screen and (min-width: 1300px) {
