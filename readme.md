@@ -2,17 +2,26 @@
 
 As a magician, I'd like to shuffle, draw and sort cards so that I can perform magic tricks
 
-* [Live example](http://www.smitadasgupta.co.uk/deckofcards) 
+* [Live example](http://www.deckofcards.smitadasgupta.co.uk)
 
 ### Prerequisites
 
-Install node.js, npm/yarn, jest
+* Install node.js, yarn
 
-## Running the tests
+### Installation
 
-Go to the test folder and run jest on command prompt
+Initialize the project by running below command on command prompt. It will automatically install all the necessary packages for you.
 
 ```
-/deckOfCards/test
-jest
+yarn install
 ```
+
+### Running the tests
+
+To run tests, use below command
+
+```
+yarn test
+```
+
+
