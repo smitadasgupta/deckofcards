@@ -197,20 +197,16 @@ class Deck {
     }
 }
 
-
-
-
-
 // Object creation
 let deck = new Deck();
 
 // Call to action
 const createBtn = document.getElementById('createDeck');
 createBtn.addEventListener("click", function() {
-  deck.clearDrawnCards();
-  deck.clearDeck();
-  deck.createDeck();
-  deck.printDeck();
+    deck.clearDrawnCards();
+    deck.clearDeck();
+    deck.createDeck();
+    deck.printDeck();
 });
 
 const shuffleBtn = document.getElementById('shuffleCards');

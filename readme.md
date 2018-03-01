@@ -14,6 +14,7 @@ Initialize the project by running below command on command prompt. It will autom
 
 ```
 yarn install
+yarn build
 ```
 
 ### Running the tests
@@ -23,5 +24,3 @@ To run tests, use below command
 ```
 yarn test
 ```
-
-
