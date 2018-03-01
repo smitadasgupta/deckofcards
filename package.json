@@ -1,6 +1,7 @@
 {
   "name": "deckofcards",
-  "description": "As a magician, I'd like to shuffle, draw and sort cards so that I can perform magic tricks",
+  "description":
+    "As a magician, I'd like to shuffle, draw and sort cards so that I can perform magic tricks",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack -p --env production",
@@ -8,21 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smitadasgupta/deckofcards.git"
+    "url": "https://github.com/smitadasgupta/deckofcards"
   },
   "author": "Smita Dasgupta",
   "license": "ISC",
   "homepage": "http://deckofcards.smitadasgupta.co.uk",
-  "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.3",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "jest": "^22.4.2"
-  },
   "devDependencies": {
-    "webpack": "^4.0.1",
-    "webpack-cli": "^2.0.9"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
   }
 }

@@ -1,16 +1,23 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: './js/card.js',
+  entry: {
+    app: ["babel-polyfill", "./js/card.js"]
+  },
   output: {
-    path: path.join(__dirname, 'public'),
-    filename: 'card.js'
+    path: path.resolve(__dirname, "public"),
+    filename: "card.js"
   },
   module: {
-    rules: [{
-      loader: 'babel-loader',
-      test: /\.js$/,
-      exclude: /node_modules/
-    }]
+    loaders: [
+      {
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+        query: {
+          presets: ["env", "stage-0"]
+        }
+      }
+    ]
   }
 };
